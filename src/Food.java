@@ -32,4 +32,8 @@ public class Food {
     this.calories = calories;
   }
 
+  public void eatFood() {
+    System.out.printf("Please, be informed, that %s = %d calories per 100g%n", getName(),
+        getCalories());
+  }
 }

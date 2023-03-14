@@ -15,5 +15,12 @@
 //    для негазированного - "скр",
 //    а для алкогольного сначала спрашивает возраст и издаёт звук, только если возраст больше 18.
 
+import java.io.IOException;
+
 public class FoodMain {
+  public static void main(String[] args) throws IOException {
+
+    Food borsh = new Food("Borsh", 300);
+    borsh.eatFood();
+  }
 }
