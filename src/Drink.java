@@ -10,10 +10,24 @@
 //    а для алкогольного сначала спрашивает возраст и издаёт звук, только если возраст больше 18.
 
 public class Drink extends Food {
+  boolean gas = false;
+  boolean alcohol = false;
+
   public Drink(String name, int calories, boolean gas, boolean alcohol) {
     super(name, calories);
-    gas = false;
-    alcohol = false;
+    this.gas = gas;
+    this.alcohol = alcohol;
   }
+  public boolean getGas() {
+    return gas;
+  }
+
+  public boolean getAlcohol(){
+    return alcohol;
+  }
+
+//  public void openBrew() {
+//    if ()
+//  }
 
 }
