@@ -22,5 +22,12 @@ public class FoodMain {
 
     Food borsh = new Food("Borsh", 300);
     borsh.eatFood();
+
+    Drink coffee = new Drink("Java", 40, false, false);
+    coffee.openBrew();
+    Drink cola = new Drink("Cola", 80, true, false);
+    cola.openBrew();
+    Drink bear = new Drink("Corona", 160, false, true);
+    bear.openBrew();
   }
 }

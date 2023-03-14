@@ -9,6 +9,10 @@
 //    для негазированного - "скр",
 //    а для алкогольного сначала спрашивает возраст и издаёт звук, только если возраст больше 18.
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Drink extends Food {
   boolean gas = false;
   boolean alcohol = false;
@@ -18,16 +22,31 @@ public class Drink extends Food {
     this.gas = gas;
     this.alcohol = alcohol;
   }
+
   public boolean getGas() {
     return gas;
   }
 
-  public boolean getAlcohol(){
+  public boolean getAlcohol() {
     return alcohol;
   }
 
-//  public void openBrew() {
-//    if ()
-//  }
+  public void openBrew() throws IOException {
+    BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
 
+    if (getGas()) {
+      System.out.println("пшш");
+    } else {
+      System.out.println("скр");
+    }
+
+    if (this.alcohol) {
+      System.out.print("Enter your age = ");
+      int age = Integer.parseInt(read.readLine());
+
+      if (age >= 18) {
+        System.out.print("чпок");
+      }
+    }
+  }
 }
