@@ -34,11 +34,7 @@ public class Drink extends Food {
   public void openBrew() throws IOException {
     BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
 
-    if (getGas()) {
-      System.out.println("пшш");
-    } else {
-      System.out.println("скр");
-    }
+    System.out.println( getGas() ? "пшш" : "скр");
 
     if (this.alcohol) {
       System.out.print("Enter your age = ");
