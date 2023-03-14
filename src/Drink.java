@@ -31,14 +31,14 @@ public class Drink extends Food {
   public void openBrew() throws IOException {
     BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
 
-    System.out.println( getGas() ? "пшш" : "скр");
+    System.out.println(this.gas ? "пшш" : "скр");
 
     if (this.alcohol) {
 
       System.out.print("Enter your age = ");
       int age = Integer.parseInt(read.readLine());
 
-      System.out.print( (age >= 18) ? "чпок" : "Лучше выберите сок");
+      System.out.print((age >= 18) ? "чпок" : "Лучше выберите сок");
 
     }
   }
